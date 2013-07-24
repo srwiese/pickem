@@ -214,130 +214,71 @@
         <div class = "row-fluid">
           <div class="span4 offset3">
             <div class="btn-toolbar">
-              <button class="btn gamesButtons">Team1</button>
-              <button class="btn gamesButtons">Team2</button>
+              <button class="btn gamesButtons" id = "game1Team1" onclick="modifyText('You Selected Team1','game1Label1')">Team1</button>
+              <button class="btn gamesButtons" id = "game1Team2" onclick="modifyText('You Selected Team2','game1Label1')">Team2</button>
             </div>
           </div>  
           <div class ="span2">
-            <label class="gamesLabel">You chose: Team X </label>
+            <label class="gamesLabel" id="game1Label1">You chose: Team X </label>
           </div>  
         </div>
         <div class = "row-fluid">
           <div class="span4 offset3">
             <div class="btn-toolbar">
-              <button class="btn gamesButtons">Team3</button>
-              <button class="btn gamesButtons">Team4</button>
+              <button class="btn gamesButtons" id = "game2Team1" onclick="modifyText('You Selected Team3','game2Label1')">Team3</button>
+              <button class="btn gamesButtons" id = "game2Team2" onclick="modifyText('You Selected Team4','game2Label1')">Team4</button>
             </div>
           </div>
           <div class ="span2">
-            <label class="gamesLabel">You chose: Team X </label>
+            <label class="gamesLabel" id="game2Label1">You chose: Team X </label>
           </div>
         </div>
     </div>
 
-    <!-- We use row-fluid inside containers to achieve a resizable layout. -->
-    <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
-    <!-- http://stackoverflow.com/a/12270322 -->
-    <div class="container">
-      <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
-      <!-- www.google.com/fonts/specimen/Ubuntu -->
-      <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
-      <div class="row-fluid heading">
-        <div class="span12">
-	  <h1>College Pickem Home</h1>
-        </div>
+    <div class="row-fluid">
+      <div class="span4 offset6">
+        <button class="btn btn-primary">Submit</button>
       </div> 
-      <div class="row-fluid subheading">
-        <div class="span12">
-          <!-- Special typography from Bootstrap for lead paragraph. -->
-          <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
-          <p>Family site for picking college football games - 2013 </p>
-        </div>
-      </div>
-      <div class="row-fluid pitch">
-        <div class="span5 offset1 video">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
-        </div>
-
-        <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
-        <div class="span5 actions">
-          <div class="span8 offset2">
-            <div class="statistics">
-              <div class="span4">
-                <!-- linediv-l and linediv-r give dividing lines that look
-                different in horizontal and vertical layouts, illustrating
-                media queries. -->
-                <div class="linediv-l">
-                <h3>100</h3> <p>backers</p>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="linediv-c">
-                  <h3>$50</h3> <p>of $1,000</p>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="linediv-r">
-                <h3>90</h3> <p>days left</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="span10 offset1">
-            <!-- Bootstrap progress bar -->
-            <!-- http://twitter.github.io/bootstrap/components.html#progress -->
-            <div class="thermometer progress active">
-              <div class="bar bar-success" style="width: 5%;"></div>
-              <div class="bar bar-warning" style="width: 95%;"></div>
-            </div>
-          </div>
-          <div class="span6 offset3 order">
-            <!-- Standard Bootstrap button. -->
-            <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
-            <button class="btn btn-success btn-large">Preorder</button>
-          </div>
-          <div class="span8 offset2 social">
-            <!-- Social buttons are not included in default Bootstrap. -->
-            <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
-            <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
-            <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
-          </div>
-        </div>
-      </div>
+    </div>
 
       <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
       <!-- This brings in jquery.js and bootstrap.js as dependencies. -->
       <!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
       <div class="row-fluid faq">
-          <div class="span10 offset1">
-            <h3>FAQ</h3>
-            <div class="accordion" id="accordion2">
-              <div class="accordion-group">
-                <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse"
-                     data-parent="#accordion2" href="#collapseOne">
-                    How do I find a teacher?
-                  </a>
+        <div class="span10 offset1">
+          <h3>FAQ</h3>
+          <div class="accordion" id="accordion2">
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse"
+                   data-parent="#accordion2" href="#collapseOne">
+                  What's College Pickem?  
+                </a>
+              </div>
+              <div id="collapseOne" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  This is a site for a family friendly competition to
+                  pick the winners of all college football games that
+                  include teams in the Top 25 each week.  
+
+                  Use the above buttons to select the teams that you think
+                  will win, whoever has the most correct picks at the end of
+                  the season wins.
                 </div>
-                <div id="collapseOne" class="accordion-body collapse">
-                  <div class="accordion-inner">
-                    Use our search form to enter information with your instrument and years of experience and we will
-                    show a list of teachers in your area that match your needs.  You will be able to view their rates,
-                    ratings, and philosophy of teaching to understand if they would be a good match.
-                  </div>
                 </div>
               </div>
               <div class="accordion-group">
                 <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse"
                      data-parent="#accordion2" href="#collapseTwo">
-                    What does Improve Your Tune cost to use?
+                    How do I choose my teams?
                   </a>
                 </div>
                 <div id="collapseTwo" class="accordion-body collapse">
                   <div class="accordion-inner">
-                    Students can join and search for free.  Teachers pay a fee to join and small monthly fee to
-                    participate in the marketplace.  
+                    Pick your name from the list of players.  Then,
+                    for each game select a winning team, when you're done
+                    press Submit.  
                   </div>
                 </div>
               </div>
@@ -352,3 +293,16 @@
         <div class="span12">
           <p>This work is licensed under
             the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC
+            By-SA 3.0
+            </a>, without all the cruft that would otherwise be put at the bottom of the page. </p>
+        </div>
+      </div>
+      <script>
+        function modifyText(new_text, labelId){
+          var label = document.getElementById(labelId);
+          label.innerHTML = new_text;
+        }
+      </script>
+
+    </body>
+  </html>
