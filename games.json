@@ -1,5 +1,5 @@
-[
-{"week_1",
+{
+"week_1":[
   {
    "Home" : "Wisconsin", "Away" : "Notre Dame"
   },
@@ -9,14 +9,13 @@
   {
    "Home" : "Stanford" , "Away" : "Oregon"
   }
-}
-{"week_2",
+  ],
+"week_2":[
  {
   "Home" : "Notre Dame", "Away" : "Michigan"
  },
  {
   "Home" : "Ohio State", "Away" : "Stanford"
  }
-}
 ]
-
+}
