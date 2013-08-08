@@ -170,7 +170,32 @@
           Pick player:
         </label>
         <div class="controls">
-          <select>
+          <select id = "update2">
+          </select>
+          <script>
+          ($.ajax({
+            url: 'names.json',
+            dataType: "json",
+            success: function (data) {
+              myNames = data.names;
+              console.log(myNames);
+              console.log("Number of names is: %d",myNames.length);
+              //var select = document.createElement("select");
+              //select.setAttribute("name", "Name Select");
+              //selectNode.onchange = function (dbrOptionChange());
+
+              var mySelect = document.getElementById("update2");
+              //have data in myNames now, need to add divs
+              for (var i = 0; i < myNames.length; i++){
+                var nextName = document.createElement("option");
+                nextName.text = myNames[i].name;
+                console.log("Next name is: %s", nextName.text);
+                mySelect.add(nextName, mySelect.options[null]);
+              }
+            }
+          }));
+          </script>
+          <select id="update">
             <option value="Chris">
               Chris
             </option> 
